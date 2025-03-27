@@ -2,13 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CompartidoModule } from '../compartido/compartido.module';
 import { UsuarioService } from './Services/usuario.service';
+import { LoginComponent } from './login/login.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LoginComponent
+  ],
   imports: [
-    CommonModule , CompartidoModule
+    CommonModule , CompartidoModule,MaterialModule
   ],
   providers: [
     UsuarioService
