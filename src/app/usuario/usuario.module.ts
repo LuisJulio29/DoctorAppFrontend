@@ -14,6 +14,9 @@ import { MaterialModule } from '../material/material.module';
   imports: [
     CommonModule , CompartidoModule,MaterialModule
   ],
+  exports: [
+    LoginComponent
+  ],
   providers: [
     UsuarioService
   ]

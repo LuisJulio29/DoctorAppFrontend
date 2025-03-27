@@ -17,10 +17,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { LayoutModule } from '@angular/cdk/layout';
-
-
 
 @NgModule({
   declarations: [],
@@ -32,7 +31,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatTableModule,MatProgressBarModule,MatProgressSpinnerModule,
     MatGridListModule,MatToolbarModule,MatSidenavModule,MatIconModule, 
     MatListModule, MatPaginatorModule,MatDialogModule,MatSnackBarModule,
-    MatTooltipModule,MatAutocompleteModule,LayoutModule
+    MatTooltipModule,MatAutocompleteModule,LayoutModule,MatFormFieldModule
   ]
 })
 export class MaterialModule { }
