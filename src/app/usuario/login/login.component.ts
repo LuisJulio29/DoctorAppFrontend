@@ -12,7 +12,7 @@ import { Login } from '../interface/login';
 })
 export class LoginComponent {
 
-  FormLogin:FormGroup;
+  formLogin:FormGroup;
   OcultarPassword:boolean = true;
   mostrarLoading:boolean = false;
 
@@ -20,17 +20,17 @@ export class LoginComponent {
   private router:Router, private usuarioService:UsuarioService,
   private compartidoService:CompartidoService) { 
 
-    this.FormLogin = this.fb.group({
-      Usuario: ['', Validators.required],
-      Password: ['', Validators.required]
+    this.formLogin = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
     });
   }
 
   iniciarSesion(){
     this.mostrarLoading = true;
     const request: Login = {
-      username: this.FormLogin.value.Usuario,
-      password: this.FormLogin.value.Password
+      username: this.formLogin.value.username,
+      password: this.formLogin.value.password
     };
     this.usuarioService.iniciarSesion(request).subscribe({
       next:(Response) => {
